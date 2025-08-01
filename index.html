@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portugal Politico</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+		<link rel="shortcut icon" href="images/icon_pt.png" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Bar */
+        .topnav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            margin-right: 20px;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ccc;
+        }
+
+        /* Main Content Container */
+        .main-container {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .grid-item {
+            aspect-ratio: 16/9;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Description Overlay */
+        .description-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.8)
+            );
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover .description-overlay {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .topnav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin: 10px 0;
+            }
+
+            .nav-links {
+                margin: 0;
+                width: 100%;
+            }
+
+            .nav-links ul {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .grid-item {
+                aspect-ratio: auto;
+                height: 300px;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .description-overlay {
+                position: relative;
+                background: rgba(0, 0, 0, 0.8);
+                transform: none;
+                padding: 15px;
+            }
+			
+			.image-link:hover ~ .description-overlay {
+				transform: translateY(0);
+			}
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="topnav">
+				<div class="logo">
+					<a href="indexnew.html">
+						<img src="images/icon_pt.png" alt="logo" width="50" height="50">
+					</a>
+				</div>
+        <nav class="nav-links">
+            <ul>
+                <a href="indexnew.html">Home</a>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+        <!-- Image Grid -->
+        <div class="image-grid">
+            <div class="grid-item">
+                <a href="Populacao.html">
+					<img src="https://picsum.photos/400/300?random=1" alt="Image 1">
+				</a>
+                <div class="description-overlay" >
+                    <h3>MAPAS</h3>
+                    <p>Descobra Portugal .</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://picsum.photos/400/300?random=2" alt="Image 2">
+                <div class="description-overlay">
+                    <h3>Urban Life</h3>
+                    <p>The vibrant energy of city streets at sunset.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://picsum.photos/400/300?random=3" alt="Image 3">
+                <div class="description-overlay">
+                    <h3>Wildlife</h3>
+                    <p>A majestic creature in its natural habitat.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://picsum.photos/400/300?random=4" alt="Image 4">
+                <div class="description-overlay">
+                    <h3>Architecture</h3>
+                    <p>Innovative building design showcasing modern style.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
